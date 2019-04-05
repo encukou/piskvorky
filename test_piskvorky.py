@@ -71,6 +71,13 @@ def test_tah_o():
     assert tah("--------------------", 19, 'o') == '-------------------o'
 
 
+@pytest.mark.level(12)
+def test_tah_vyhraj():
+    """Tah na pole, které má na začátku a konci symboly"""
+    from util import tah
+    assert tah("oxx--------------oox", 3, 'x') == 'oxxx-------------oox'
+
+
 @pytest.mark.level(20)
 def test_tah_velka_pozice():
     """Tah na pozici co není v poli by měl skončit chybou ValueError"""
